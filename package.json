@@ -44,6 +44,12 @@
     "test": "jest",
     "dev:tdd": "node --inspect=5859 node_modules/.bin/jest --runInBand --watch"
   },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix --quiet",
+      "git add"
+    ]
+  },
   "dependencies": {
     "axios": "^1.8.1",
     "body-parser": "^1.20.3",
